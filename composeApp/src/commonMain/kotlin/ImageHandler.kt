@@ -33,7 +33,5 @@ fun locationTest(location : Location) {
     folder called Oma) Um den "Visual Novel" Effekt zu erhalten (?)
   -------------------------------------------------------------------- */
 
-/*
 @Composable
 expect fun callImage(location : Location)
-*/

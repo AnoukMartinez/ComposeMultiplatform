@@ -28,6 +28,7 @@ fun AppAndroidPreview() {
     App()
 }
 
+/*
 @Composable
 actual fun callImage(location : Location){
     Image(
@@ -35,4 +36,4 @@ actual fun callImage(location : Location){
         modifier = Modifier.fillMaxSize(),
         contentDescription = location.toString()
     )
-}
+}*/

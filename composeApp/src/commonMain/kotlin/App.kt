@@ -7,10 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.DragData
 import androidx.compose.ui.Modifier
-import org.jetbrains.compose.resources.ExperimentalResourceApi
-import androidx.compose.foundation.Image
 
 @Composable
 fun App() {
@@ -31,5 +28,3 @@ fun App() {
     }
 }
 
-@Composable
-expect fun callImage(location : Location)
