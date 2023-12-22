@@ -13,6 +13,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import mvvm.views.Oberwelt
 import org.example.project.R
 
 class MainActivity : ComponentActivity() {
@@ -32,6 +33,7 @@ actual fun callImage(location : Location){
         contentDescription = location.toString()
     )
 }
+
 
 @Composable
 fun LockScreenOrientation(orientation: Int) {

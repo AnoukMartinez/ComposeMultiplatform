@@ -72,6 +72,12 @@ android {
         debugImplementation(libs.compose.ui.tooling)
     }
 }
+dependencies {
+    implementation(libs.androidx.foundation.android)
+    implementation(libs.androidx.material3)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
+}
 
 compose.desktop {
     application {
