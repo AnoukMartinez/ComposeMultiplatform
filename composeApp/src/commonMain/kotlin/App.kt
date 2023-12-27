@@ -16,15 +16,14 @@ fun App() {
 
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
 
-            locationButton("OMA") { currentLocation = Location.OMA }
-            locationButton("KEVIN") { currentLocation = Location.KEVIN }
-            locationButton("SCHULE") { currentLocation = Location.SCHULE }
-
+            LevelButton("OMA") { currentLocation = Location.OMA }
+            LevelButton("KEVIN") { currentLocation = Location.KEVIN }
+            LevelButton("SCHULE") { currentLocation = Location.SCHULE }
+            LevelButton("JUSTIN") { currentLocation = Location.JUSTIN }
 
             currentLocation?.let { location ->
-                locationTest(location)
+                getLocationImage(location)
             }
         }
     }
 }
-
