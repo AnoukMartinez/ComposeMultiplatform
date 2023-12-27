@@ -18,9 +18,9 @@ public enum class Location {
 @Composable
 fun getLocationImage(location : Location) {
     Card(modifier = Modifier) {
-        callImage(location)
+        LocationImage(location)
     }
 }
 
 @Composable
-expect fun LevelButton(locationName : String, onClick : () -> Unit)
+expect fun LevelButton(location : Location, onClick : () -> Unit)

@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import org.example.project.R
 
 @Composable
-actual fun LevelButton(locationName : String, onClick : () -> Unit) {
+actual fun LevelButton(location : Location, onClick : () -> Unit) {
     Column(modifier = Modifier.wrapContentSize(Alignment.Center)) {
         Image (
             painterResource(R.drawable.haus1), "Haus der jeweiligen Location",
@@ -27,7 +27,7 @@ actual fun LevelButton(locationName : String, onClick : () -> Unit) {
             onClick = { onClick() }
         )
         {
-            Text(locationName)
+            Text(location.toString())
         }
     }
 }

@@ -6,7 +6,7 @@ import androidx.compose.ui.res.painterResource
 import org.example.project.R
 
 @Composable
-actual fun callImage(location : Location){
+actual fun LocationImage(location : Location){
     Image(
         painterResource(getResourceFromLocation(location)),
         modifier = Modifier.fillMaxSize(),

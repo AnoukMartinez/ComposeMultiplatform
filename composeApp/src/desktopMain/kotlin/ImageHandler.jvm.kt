@@ -5,7 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 
 @Composable
-actual fun callImage(location : Location){
+actual fun LocationImage(location : Location){
     Image(
         painterResource(location.getDesktopPath()),
         modifier = Modifier.fillMaxSize(),

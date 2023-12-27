@@ -1,3 +1,5 @@
+import Models.levels
+import Views.Oberwelt
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.MaterialTheme
@@ -15,11 +17,10 @@ fun App() {
         var currentLocation by remember { mutableStateOf<Location?>(null) }
 
         Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-
-            LevelButton("OMA") { currentLocation = Location.OMA }
-            LevelButton("KEVIN") { currentLocation = Location.KEVIN }
-            LevelButton("SCHULE") { currentLocation = Location.SCHULE }
-            LevelButton("JUSTIN") { currentLocation = Location.JUSTIN }
+            // HomeScreen { }
+            Oberwelt(levels) { selectedLocation ->
+                currentLocation = selectedLocation
+            }
 
             currentLocation?.let { location ->
                 getLocationImage(location)

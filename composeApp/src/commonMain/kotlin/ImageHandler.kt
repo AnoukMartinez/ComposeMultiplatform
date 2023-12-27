@@ -5,4 +5,4 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 
 @Composable
-expect fun callImage(location : Location)
+expect fun LocationImage(location : Location)
