@@ -32,6 +32,12 @@ kotlin {
             implementation(compose.ui)
             @OptIn(ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
+
+            api(compose.foundation)
+            api(compose.animation)
+
+            //noinspection UseTomlInstead
+            api("moe.tlaster:precompose:1.5.10")
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)

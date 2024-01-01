@@ -19,9 +19,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import moe.tlaster.precompose.navigation.Navigator
 
 @Composable
-fun HomeScreen(onClickPlay : () -> Unit) {
+fun HomeScreen(navigator : Navigator) {
     Row(
         modifier = Modifier
             .fillMaxSize(),
@@ -41,7 +42,7 @@ fun HomeScreen(onClickPlay : () -> Unit) {
                     .padding(60.dp, 0.dp),
                 horizontalArrangement = Arrangement.Center
             ) {
-                TextButton(onClick = { onClickPlay() }) {
+                TextButton(onClick = { navigator.navigate("/worldmap") }) {
                     Text(
                         text = "PLAY",
                         color = Color.Black,
