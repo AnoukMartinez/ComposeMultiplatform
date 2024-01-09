@@ -20,8 +20,6 @@ import moe.tlaster.precompose.navigation.transition.NavTransition
 fun App() {
     PreComposeApp {
         MaterialTheme {
-            var currentLocation by remember { mutableStateOf<Location?>(null) }
-
             val navigator = rememberNavigator()
             NavHost (
                 navigator = navigator,
@@ -41,13 +39,7 @@ fun App() {
                     route = "/worldmap",
                     navTransition = NavTransition(),
                 ) {
-                    Oberwelt(levels, navigator) { selectedLocation ->
-                        currentLocation = selectedLocation
-                    }
-
-                    currentLocation?.let { location ->
-                        getLocationImage(location)
-                    }
+                    Oberwelt(levels, navigator)
                 }
 
                 // KEVINS HAUS

@@ -1,5 +1,5 @@
+import Models.Level
 import androidx.compose.material.Card
-import androidx.compose.material.Text
 import androidx.compose.material.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -23,4 +23,4 @@ fun getLocationImage(location : Location) {
 }
 
 @Composable
-expect fun LevelButton(location : Location, onClick : () -> Unit)
+expect fun LevelButton(location: Location, level :  Level, onClick: () -> Unit)

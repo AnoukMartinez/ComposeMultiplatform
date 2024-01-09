@@ -1,3 +1,4 @@
+import Models.Level
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.size
@@ -15,7 +16,7 @@ import org.jetbrains.compose.resources.painterResource
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-actual fun LevelButton(location : Location, onClick : () -> Unit) {
+actual fun LevelButton(location: Location, level: Level, onClick: () -> Unit) {
     Column(modifier = Modifier.wrapContentSize(Alignment.Center)) {
         Image (
             painterResource("haus1.png"), "Haus der jeweiligen Location",
