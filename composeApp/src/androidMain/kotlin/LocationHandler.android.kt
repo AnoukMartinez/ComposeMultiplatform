@@ -2,7 +2,9 @@ import Models.Level
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
@@ -40,6 +42,13 @@ actual fun LevelButton(location: Location, level: Level, onClick: () -> Unit) {
                     .size(15.dp)
                     .background(color = discoveredColor)
             )
+            if(level.cleared) {
+                Image(
+                    painterResource(R.drawable.cleared), "Wenn komplett bearbeitet",
+                    modifier = Modifier
+                        .size(15.dp)
+                )
+            }
         }
         Image (
             painterResource(R.drawable.haus1), "Haus der jeweiligen Location",

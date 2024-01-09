@@ -36,6 +36,9 @@ fun Oberwelt(
                 LevelButton(listOfLevels[i].location, level = listOfLevels[i]) {
                     navigator.navigate("/${listOfLevels[i].location.toString().lowercase()}")
                     listOfLevels[i].discovered = true
+                    // ACHTUNG das hier muss später geändert werden
+                    // Darf erst getoggelt werden wenn das Level komplett durchgespielt wurde
+                    listOfLevels[i].cleared = true
                 }
             }
         }
@@ -45,6 +48,9 @@ fun Oberwelt(
                 LevelButton(listOfLevels[i].location, level = listOfLevels[i]) {
                     navigator.navigate("/${listOfLevels[i].location.toString().lowercase()}")
                     listOfLevels[i].discovered = true
+                    // ACHTUNG das hier muss später geändert werden
+                    // Darf erst getoggelt werden wenn das Level komplett durchgespielt wurde
+                    listOfLevels[i].cleared = true
                 }
             }
         }
