@@ -4,10 +4,14 @@ import Location
 
 // WORK IN PROGRESS...
 // Vielleicht kann man hier eine Datei mit dem Script durchlaufen?
-class Script(val testline : String) {
+class Script(val test : DialogueLine) {
     fun getDialogue() {
         // WORK IN PROGRESS...
     }
+}
+
+class DialogueLine(val testline : String) {
+
 }
 
 data class Level (
@@ -17,10 +21,15 @@ data class Level (
     var script : Script
 )
 
-var kevinScript = Script("Oh hey Justin, wie geht's? Ich spiele gerade Fortnite...")
-var omaScript = Script("Hallo Justin! Willst du ein paar selbstgemachte Kekse?")
-var schuleScript = Script("Hey Mann, du hast doch in Informatik aufgepasst, oder?")
-var justinScript = Script("Home Sweet Home... Zeit selber nach Hinweisen zu suchen.")
+var kevinTestLine = DialogueLine("Oh hey Justin, wie geht's? Ich spiele gerade Fortnite...")
+var omaTestLine = DialogueLine("Hallo Justin! Willst du ein paar selbstgemachte Kekse?")
+var schuleTestLine = DialogueLine("Hey Mann, du hast doch in Informatik aufgepasst, oder?")
+var justinTestLine = DialogueLine("Home Sweet Home... Zeit selber nach Hinweisen zu suchen.")
+
+var kevinScript = Script(kevinTestLine)
+var omaScript = Script(omaTestLine)
+var schuleScript = Script(schuleTestLine)
+var justinScript = Script(justinTestLine)
 
 var kevin = Level(Location.KEVIN, script = kevinScript)
 var oma = Level(Location.OMA, script = omaScript)

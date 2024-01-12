@@ -35,6 +35,8 @@ fun Oberwelt(
             for (i in 0..<listOfLevels.size / 2) {
                 LevelButton(listOfLevels[i].location, level = listOfLevels[i]) {
                     navigator.navigate("/${listOfLevels[i].location.toString().lowercase()}")
+                    // Muss später persistent gespeichert werden!
+                    // Sonst resettet der Fortschritt bei jedem Neustart
                     listOfLevels[i].discovered = true
                     // ACHTUNG das hier muss später geändert werden
                     // Darf erst getoggelt werden wenn das Level komplett durchgespielt wurde
